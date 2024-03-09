@@ -2,6 +2,9 @@
 
 A "package manager" for FreshRSS. It allows you to install, update and remove FreshRSS extensions easily.
 
+![image](https://github.com/yzqzss/freshrss-ext-manager/assets/30341059/af6d4034-7358-4130-842e-6fbb755d145b)
+
+
 ## Installation
 
 ```bash
