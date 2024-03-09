@@ -61,6 +61,10 @@ class Metadata:
     def __post_init__(self):
         assert self.name and self.entrypoint
         assert self.type in ['system', 'user'] if self.type else True
+        
+        if self.version:
+            if isinstance(self.version, (int, float)):
+                self.version = str(self.version)
 
 @dataclass
 class Repo:
@@ -96,6 +100,9 @@ class Repo:
     def __post_init__(self):
         self._generate_pkg_name()
         self._set_installed_flag()
+        if isinstance(self.version, (int, float)):
+            self.version = str(self.version)
+
         if self.installed:
             self._set_installed_version()
 
