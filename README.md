@@ -8,7 +8,7 @@ A "package manager" for FreshRSS. It allows you to install, update and remove Fr
 cd /path/to/FreshRSS/extensions
 curl https://github.com/yzqzss/freshrss-ext-manager/raw/main/freshext.py -o freshext.py
 chmod +x freshext.py
-'''
+```
 
 ## Usage
 
