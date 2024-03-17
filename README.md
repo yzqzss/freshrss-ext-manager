@@ -25,10 +25,10 @@ chmod +x freshext.py
 ./freshext.py clean # clean cache
 ```
 
-One line to install all extensions:
+One line to install a extension:
 
 ```bash
-./freshext.py update && ./freshext.py install all # "all" is a special behavior to install all extensions
+./freshext.py update && ./freshext.py install <extension>
 ```
 
 One line to upgrade all extensions:
