@@ -128,8 +128,8 @@ class Repo:
     def _generate_pkg_name(self):
         url_path = urllib.parse.urlparse(self.url).path
         url_path = url_path.removesuffix('/')
-        pkg_name = self.directory if self.directory.startswith("xExtension-") else url_path.split('/')[-1].split('.')[0]
-        assert pkg_name and pkg_name != "."
+        pkg_name = self.directory if self.directory.startswith("xExtension-") else url_path.rstrip('/').split('/')[-1].split('.')[0]
+        assert pkg_name and pkg_name != ".", (self.directory, url_path)
         self.pkg_name = pkg_name
 
 def read_pkg_repos(pkg_name_fillter = "") -> List[Repo]:
