@@ -300,7 +300,7 @@ def set_permissions(path: Path):
         for user_ in COMMON_WEB_SERVER_USERS:
             print(f"Trying to change permissions to {user_}")
             if not is_root and is_sudo:
-                print('using sude')
+                print('using sudo')
             r = chown_r(path, user, user, use_sudo=not is_root)
             if r == 0:
                 print(f"Permissions changed to {user_}:{user_}")
